@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">cabeçalho</div>
+        <div class="sidebar">barra lateral</div>
+        <div class="main">conteudo principal</div>
+        <div class="footer">rodapé</div>
+    </div>
+</body>
+<style>
+    .container {
+        display:grid;
+        grid-template-areas:
+        "header header header"
+        "sideba main main"
+        "footer footer footer";
+    grid-template-rows: 60px 1fr 40px; 
+    grid-template-columns: 200px 1fr 1fr; 
+    height: 100vh;  
+    }
+    .header {
+        grid-area:header;
+        background-color: crimson;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sidebar {
+        grid-area: sidebar;
+        background-color: white;
+        padding: 20px;
+    }
+    .main {
+        grid-area: main;
+        padding: 20px;
+        background-color: aqua;
+    }
+    .footer {
+        grid-area: footer;
+        background-color: lightpink;
+        color: lightseagreen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+</html>
